@@ -23,12 +23,13 @@ class Graph
     Graph(); 
     ~Graph();
 
+    //Carga
     void loadGraphList(std::string,int); //Mete los nodos a adjList
     void loadNodeNames(std::string); //Carga los nombres de cada nodo
 
     //Búsquedas
     std::string BFS(int,int); //El recorrido de BFS junto con el camino más corto
-    std::string Dijkstra(int,int); //Algoritmo Dijkstra para el camino de costo mínimo
+    //std::string Dijkstra(int,int); //Algoritmo Dijkstra para el camino de costo mínimo
     void pathBFS(int,int,std::queue<int>&,std::stringstream&); //apoya a BFS a sacar el camino más corto
 
     //Impresiones
@@ -316,7 +317,7 @@ std::string Graph::printAdjListWithCost()
   return str.str();
 }
 
-std::string Graph::Dijkstra(int start,int end)
+/*std::string Graph::Dijkstra(int start,int end)
 {
   std::queue<int> tourist;
   bool permanent[nodes];
@@ -412,7 +413,7 @@ std::string Graph::Dijkstra(int start,int end)
   }
 
   return min_path.str();
-}
+}*/
 
 std::string Graph::searchByNameBFS(std::string node1,std::string node2)
 {
